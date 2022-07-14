@@ -11,9 +11,12 @@ import static java.lang.Integer.parseInt;
 
 @RestController
 public class Controlador1 {
-
     @Autowired
     PersonaService personaService;
+    @Autowired
+    CiudadService ciudadService;
+
+
 
     @PostMapping("/controlador1/addPersona")
     public PersonaService addPersona(@RequestHeader Map<String, String> headers) {
@@ -27,8 +30,6 @@ public class Controlador1 {
 
         return personaService;
     }
-    @Autowired
-    CiudadService ciudadService;
 
     @PostMapping("/controlador1/addCiudad")
     public void addCiudad(@RequestHeader Map<String, String> headers){

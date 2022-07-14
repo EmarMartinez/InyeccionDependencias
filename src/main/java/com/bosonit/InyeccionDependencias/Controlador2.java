@@ -25,7 +25,7 @@ public class Controlador2 {
     CiudadService ciudadService;
 
     @GetMapping("controlador2/getCiudad")
-    @ResponseBody
+
     public List listaCiudades(){
         return ciudadService.listaCiudades();
 
